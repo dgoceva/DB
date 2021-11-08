@@ -1,0 +1,49 @@
+# depslib dependency file v1.0
+1610594570 source:d:\lectures\db_en\c_db_sample\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<mysql.h>
+
+1604050172 c:\program files\mariadb\mariadb connector c 64-bit\include\mysql.h
+	<stdarg.h>
+	<sys/types.h>
+	"mariadb_com.h"
+	"mariadb_version.h"
+	"ma_list.h"
+	"mariadb_ctype.h"
+	"mariadb_stmt.h"
+
+1604050172 c:\program files\mariadb\mariadb connector c 64-bit\include\mariadb_com.h
+
+1604050256 c:\program files\mariadb\mariadb connector c 64-bit\include\mariadb_version.h
+	<custom_conf.h>
+
+1604050172 c:\program files\mariadb\mariadb connector c 64-bit\include\ma_list.h
+
+1604050172 c:\program files\mariadb\mariadb connector c 64-bit\include\mariadb_ctype.h
+	<ctype.h>
+
+1604050172 c:\program files\mariadb\mariadb connector c 64-bit\include\mariadb_stmt.h
+
+1604050172 c:\program files (x86)\mariadb\mariadb connector c\include\mysql.h
+	<stdarg.h>
+	<sys/types.h>
+	"mariadb_com.h"
+	"mariadb_version.h"
+	"ma_list.h"
+	"mariadb_ctype.h"
+	"mariadb_stmt.h"
+
+1604050172 c:\program files (x86)\mariadb\mariadb connector c\include\mariadb_com.h
+
+1604050182 c:\program files (x86)\mariadb\mariadb connector c\include\mariadb_version.h
+	<custom_conf.h>
+
+1604050172 c:\program files (x86)\mariadb\mariadb connector c\include\ma_list.h
+
+1604050172 c:\program files (x86)\mariadb\mariadb connector c\include\mariadb_ctype.h
+	<ctype.h>
+
+1604050172 c:\program files (x86)\mariadb\mariadb connector c\include\mariadb_stmt.h
+
