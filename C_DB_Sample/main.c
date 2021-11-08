@@ -194,7 +194,7 @@ void last_row_id()
 
   mysql_close(con);
 }
-/*
+
 void headers()
 {
   MYSQL *con = mysql_init(NULL);
@@ -251,7 +251,7 @@ void headers()
   mysql_free_result(result);
   mysql_close(con);
 }
-*/
+
 
 void multiple_statemens()
 {
@@ -526,7 +526,7 @@ int main()
 //    create_populate();
     retrieve_data();
 //    last_row_id();
-//    headers();
+    headers();
     multiple_statemens();
 //    insert_image();
     select_image();
