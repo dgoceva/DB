@@ -5,6 +5,7 @@ def convertToBinaryData(filename):
     # Convert digital data to binary format
     with open(filename, 'rb') as file:
         binaryData = file.read()
+    file.close()
     return binaryData
 
 
@@ -16,8 +17,9 @@ try:
         cursor.execute("""INSERT INTO employee
             (id, name, photo, biodata) VALUES (%s,%s,%s,%s)""",
                        (1, 'Winnie the Pooh',
-                        convertToBinaryData('Winnie-the-Pooh.jpg'),
-                        convertToBinaryData('lorem-ipsum.txt')))
+                        convertToBinaryData(
+                            'd:/Lectures/DB_En/DB/python_DB_Sample/Winnie-the-Pooh.jpg'),
+                        convertToBinaryData('d:/Lectures/DB_En/DB/python_DB_Sample/lorem-ipsum.txt')))
     con.commit()
     print('Image and file inserted successfully as a BLOB into employee table')
 except con.Error as error:
