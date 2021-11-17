@@ -16,6 +16,14 @@
             <h3>Please go to the admin and add a Name under 'MYAPP'</h3>
         {% endif %}
         <h3>Add a Name</h3>
-        <button>Create</button>
+        <form id="name_form" method="post" action="/">
+            {% csrf_token %}
+            {% for field in form.visible_fields %}
+                {{field.errors}}
+                {{field.help_text}}
+                {{field}}
+            {% endfor %}
+            <input type="submit"name="submit" value="Create">
+        </form>
     </body>
 </html>
