@@ -6,6 +6,15 @@
     <body>
         <h2>Simplest CRUD Example</h2>
         <p>This shows a list ot names and lets you Create, Update and Delete them.</p>
+        {% if names_from_context %}
+            <ul>
+                {% for name in names_from_context %}
+                    <li>{{ name.name_value }} <button>Delete</button><button>Update</button></li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <h3>Please go to the admin and add a Name under 'MYAPP'</h3>
+        {% endif %}
         <h3>Add a Name</h3>
         <button>Create</button>
     </body>
