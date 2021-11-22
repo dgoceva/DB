@@ -1,5 +1,9 @@
 {%extends 'employee_register/base.html'%}
 
 {% block content%}
-<p>We'll show django form to implement CRUD operations</p>
+{%load crispy_forms_tags %}
+<form action="" method="post" autocomplete="off">
+    {% csrf_token %}
+    {{form|crispy}}
+</form>
 {%endblock%}
