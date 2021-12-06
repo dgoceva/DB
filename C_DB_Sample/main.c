@@ -376,6 +376,7 @@ void insert_image()
   if (ferror(fp)) {
 
       fprintf(stderr, "fread() failed\n");
+      free(data);
       int r = fclose(fp);
 
       if (r == EOF) {
@@ -396,12 +397,14 @@ void insert_image()
   if (con == NULL)
   {
       fprintf(stderr, "mysql_init() failed\n");
+      free(data);
       exit(EXIT_FAILURE);
   }
 
   if (mysql_real_connect(con, "localhost", "root", "",
           "testdb", 0, NULL, 0) == NULL)
   {
+      free(data);
       finish_with_error(con);
   }
 
@@ -409,6 +412,7 @@ void insert_image()
   char *chunk = (char *)malloc(2*size+1);
   if (chunk==NULL) {
       fprintf(stderr, "malloc() for chunk failed\n");
+      free(data);
       int r = fclose(fp);
 
       if (r == EOF) {
@@ -421,10 +425,12 @@ void insert_image()
   free(data);
 
   if (mysql_query(con, "DROP TABLE IF EXISTS images")) {
+      free(chunk);
       finish_with_error(con);
   }
 
   if (mysql_query(con, "CREATE TABLE images(id INT PRIMARY KEY, data MEDIUMBLOB)")) {
+      free(chunk);
       finish_with_error(con);
   }
 
