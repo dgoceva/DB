@@ -1,6 +1,6 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
 <h1><?php echo $data['title']; ?></h1>
-<p>This is the TraversyMVC PHP framework. Please refer to the docs on how to use it</p>
+<p>This is the Sample PHP framework.</p>
 <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">Traversy MVC</a>

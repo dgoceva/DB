@@ -11,7 +11,7 @@ class Pages extends Controller
     {
 
         $data = [
-            'title' => 'TraversyMVC'
+            'title' => 'PHP_DB_SAMPLE'
         ];
 
 
