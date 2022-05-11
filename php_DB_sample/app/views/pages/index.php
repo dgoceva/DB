@@ -1,9 +1,9 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
 <h1><?php echo $data['title']; ?></h1>
 <p>This is the Sample PHP framework.</p>
-<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Traversy MVC</a>
+        <a class="navbar-brand" href="#">Sample MVC</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -40,5 +40,5 @@
             </form>
         </div>
     </div>
-</nav> -->
+</nav>
 <?php require APPROOT . '/views/inc/footer.php'; ?>
