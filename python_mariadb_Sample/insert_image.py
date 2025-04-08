@@ -16,6 +16,9 @@ try:
         autocommit=True
     )
     cur = con.cursor()
+    cur.execute("DROP TABLE IF EXISTS Images")
+    cur.execute("CREATE TABLE Images(Id INT PRIMARY KEY AUTO_INCREMENT, \
+                 Data MEDIUMBLOB)")
     cur.execute("INSERT INTO Images(Id,Data) VALUES(?,?)",
                 (1, read_image('tree.jpg')))
 
