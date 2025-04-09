@@ -14,12 +14,14 @@ con = pymysql.connect(host='localhost', user='user7',
 
 try:
     with con.cursor() as cursor:
+        cursor.execute("DROP TABLE IF EXISTS employee;")
+        cursor.execute("CREATE TABLE employee(id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(50), photo MEDIUMBLOB, biodata MEDIUMTEXT);")
         cursor.execute("""INSERT INTO employee
             (id, name, photo, biodata) VALUES (%s,%s,%s,%s)""",
                        (1, 'Winnie the Pooh',
                         convertToBinaryData(
-                            'd:/Lectures/DB_En/DB/python_DB_Sample/Winnie-the-Pooh.jpg'),
-                        convertToBinaryData('d:/Lectures/DB_En/DB/python_DB_Sample/lorem-ipsum.txt')))
+                            'Winnie-the-Pooh.jpg'),
+                        convertToBinaryData('lorem-ipsum.txt')))
     con.commit()
     print('Image and file inserted successfully as a BLOB into employee table')
 except con.Error as error:

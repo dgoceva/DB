@@ -1,9 +1,9 @@
 import pymysql
 
 
-def write_file(data, filename):
+def write_file(data, filename, mode):
     # Convert binary data to proper format and write it on Hard Disk
-    with open(filename, 'wb') as file:
+    with open(filename, mode) as file:
         file.write(data)
     file.close()
 
@@ -22,9 +22,9 @@ try:
             file = row[3]
             print("Storing employee image and bio-data on disk \n")
             write_file(
-                image, 'd:/Lectures/DB_En/DB/python_DB_Sample/Winnie-the-Pooh-out.jpg')
+                image, 'Winnie-the-Pooh-out.jpg','wb')
             write_file(
-                file, 'd:/Lectures/DB_En/DB/python_DB_Sample/lorem-ipsum-out.txt')
+                file, 'lorem-ipsum-out.txt','w')
 
 except con.Error as error:
     print("Failed to read BLOB data from table {}".format(error))
