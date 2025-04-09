@@ -7,6 +7,7 @@ try:
         password='test623',
         host='localhost',
         database='testdb',
+        autocommit=False
     )
     cur = con.cursor()
     cur.execute("DELETE FROM Writers")
